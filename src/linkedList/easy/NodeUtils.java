@@ -19,6 +19,20 @@ public class NodeUtils {
         return dummy.next;
     }
 
+    public static Node constructLinkedList(int[] array) {
+        Node dummy = new Node();
+        Node cur = dummy;
+        if (array.length == 0) {
+            return null ;
+        }
+        for (int i : array) {
+            Node node = new Node(i);
+            cur.next = node;
+            cur = node;
+        }
+        return dummy.next;
+    }
+
     public static void printLinkedList(Node head) {
         ArrayList<Integer> list = new ArrayList<>();
         while (head != null) {
