@@ -41,4 +41,11 @@ public class NodeUtils {
         }
         System.out.println(list);
     }
+
+    public static Node getLastNode(Node head) {
+        while (head.next != null) {
+            head = head.next;
+        }
+        return head;
+    }
 }
